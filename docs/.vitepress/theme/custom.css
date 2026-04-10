@@ -43,8 +43,9 @@
   --vp-home-hero-image-filter: drop-shadow(0 0 40px rgba(0, 217, 255, 0.16));
 
   --vp-button-brand-text: #04131d;
-  --vp-button-brand-bg: linear-gradient(135deg, #b6fbff 0%, #72f5ff 22%, #00d9ff 58%, #58b5ff 100%);
-  --vp-button-brand-hover-bg: linear-gradient(135deg, #d4fdff 0%, #98f8ff 22%, #30e3ff 58%, #78c4ff 100%);
+  --vp-button-brand-bg: #5eeeff;
+  --vp-button-brand-hover-bg: #8df6ff;
+  --vp-button-brand-active-bg: #38ddff;
   --vp-button-brand-border: transparent;
   --vp-button-alt-text: var(--sa-text);
   --vp-button-alt-bg: rgba(255, 255, 255, 0.03);
@@ -346,9 +347,23 @@ h6,
 
 .VPButton.brand,
 .VPButton.brand:hover,
+.VPButton.brand:active,
 .VPButton.brand:visited {
   color: #04131d !important;
   text-shadow: none;
+}
+
+.VPButton.brand {
+  background: linear-gradient(135deg, #b6fbff 0%, #72f5ff 22%, #00d9ff 58%, #58b5ff 100%) !important;
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.24), 0 0 0 1px rgba(255, 255, 255, 0.12) inset;
+}
+
+.VPButton.brand:hover {
+  background: linear-gradient(135deg, #d4fdff 0%, #98f8ff 22%, #30e3ff 58%, #78c4ff 100%) !important;
+}
+
+.VPButton.brand:active {
+  background: linear-gradient(135deg, #98f8ff 0%, #63ebff 22%, #1bdcff 58%, #59b5ff 100%) !important;
 }
 
 .VPFeature,
