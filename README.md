@@ -65,6 +65,12 @@ That script will:
 - rewrite internal links for the VitePress site
 - regenerate the VitePress nav and sidebar data
 
+Important:
+
+- This sync path is meant for the legacy GitBook-hosted site during migration.
+- The GitHub Pages deploy workflow intentionally does **not** run `npm run sync`, because once `build.staratlas.com` points at this repo, the repo becomes the source of truth.
+- If you ever need another import from the old GitBook site after cutover, update the sync script to point at a valid legacy source before running it.
+
 ## Preview and path assumptions
 
 The config is tuned for the final custom domain at the site root. If you want to preview the built site under a temporary GitHub Pages subpath before DNS cutover, adjust the VitePress `base` setting first.

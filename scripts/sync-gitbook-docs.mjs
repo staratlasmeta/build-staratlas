@@ -273,8 +273,35 @@ async function writeRedirectPages() {
   }
 }
 
+async function verifyGitBookSource() {
+  const probePath = '/introduction/what-is-star-atlas'
+  const markdownUrl = `${BASE_URL}${probePath}.md`
+  const probeResponse = await fetch(markdownUrl, {
+    headers: {
+      'user-agent': USER_AGENT,
+      accept: 'text/markdown,text/plain;q=0.9,text/html;q=0.8,*/*;q=0.7'
+    }
+  })
+
+  if (!probeResponse.ok) {
+    throw new Error(
+      `Sync source check failed for ${markdownUrl}: ${probeResponse.status} ${probeResponse.statusText}. ` +
+      'This sync script is intended for the legacy GitBook source and should not run against the GitHub Pages site.'
+    )
+  }
+
+  const body = (await probeResponse.text()).trim()
+  if (!body.startsWith('# ')) {
+    throw new Error(
+      `Sync source check failed for ${markdownUrl}. Expected GitBook markdown but received different content. ` +
+      'If build.staratlas.com has already been cut over, do not run sync until the source URL is updated.'
+    )
+  }
+}
+
 async function main() {
   await mkdir(generatedDir, { recursive: true })
+  await verifyGitBookSource()
   await removeImportedDocs()
 
   const sitemap = await fetchText(SITEMAP_URL)

@@ -34,9 +34,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Sync docs
-        run: npm run sync
-
       - name: Build site
         run: npm run build
 
