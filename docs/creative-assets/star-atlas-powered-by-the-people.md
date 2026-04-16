@@ -1,8 +1,9 @@
 # Star Atlas: Powered by the People
 
-![](https://1689566151-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fr7ZiGN2LM1O6jHUxXhof%2Fuploads%2FJdvWyYtdbXEAQUDZgqJg%2FSA-CommunityLogo-2.png?alt=media\&token=ab8727fc-4f91-4f01-9e75-d471e5bde70c)![](https://1689566151-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2Fr7ZiGN2LM1O6jHUxXhof%2Fuploads%2FZjeihOqc84fRqvrrYiAf%2FSA-CommunityLogo-1.png?alt=media\&token=b1251bc6-1e9b-443a-977e-25f4bbd4ec1f)
+![](/images/docs-assets/star-atlas-powered-by-the-people-01-SA-CommunityLogo-2.png)![](/images/docs-assets/star-atlas-powered-by-the-people-02-SA-CommunityLogo-1.png)
 
-This is the community logo for creators building with Star Atlas IP\
+This is the community logo for creators building with Star Atlas IP
+\
 Use it proudly to show your work is part of the Powered by the People initiative
 
 ### Why Use This Logo?
